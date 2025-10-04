@@ -15,4 +15,5 @@ jobs:
       with:
         java-version: ${{matrix.java}}
         distribution: zulu
+    - uses: sbt/setup-sbt@v1
     - run: sbt "Jmh/run -i 10 -wi 10 -f1"
